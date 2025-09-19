@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "PromptEditor.io Auto-Injector",
+  "version": "1.0.0",
+  "description": "Automatically inject prompts from PromptEditor.io into various LLM interfaces",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*",
+    "https://claude.ai/*",
+    "https://x.com/i/grok*",
+    "https://twitter.com/i/grok*",
+    "https://grok.com/*",
+    "https://gemini.google.com/*",
+    "http://localhost:3000/*",
+    "http://localhost:3001/*"
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://x.com/i/grok*",
+        "https://twitter.com/i/grok*",
+        "https://grok.com/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": ["scripts/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://localhost/*",
+      "http://localhost:3000/*",
+      "http://localhost:3001/*",
+      "http://localhost:3002/*",
+      "http://localhost:3003/*",
+      "http://localhost:3004/*",
+      "http://127.0.0.1/*",
+      "http://127.0.0.1:3000/*",
+      "http://127.0.0.1:3001/*",
+      "http://127.0.0.1:3002/*",
+      "https://*.prompteditor.io/*"
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  }
+}

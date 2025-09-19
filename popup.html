@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PromptEditor.io Auto-Injector</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      margin: 0;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin: 0 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .status {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .tabs-list {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 8px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    
+    .tab-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      margin-bottom: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .tab-item.ready {
+      border-left: 3px solid #10b981;
+    }
+    
+    .tab-item.error {
+      border-left: 3px solid #ef4444;
+    }
+    
+    .platform-badge {
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.2);
+      font-weight: 600;
+    }
+    
+    button {
+      width: 100%;
+      padding: 10px;
+      background: white;
+      color: #667eea;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    
+    button:hover {
+      background: #f3f4f6;
+    }
+    
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 2L2 7L12 12L22 7L12 2Z"></path>
+      <path d="M2 17L12 22L22 17"></path>
+      <path d="M2 12L12 17L22 12"></path>
+    </svg>
+    PromptEditor.io Auto-Injector
+  </h1>
+  
+  <div class="status">
+    <div id="status-text">Checking for LLM tabs...</div>
+  </div>
+  
+  <div class="tabs-list" id="tabs-list">
+    <div class="empty-state">No LLM tabs found</div>
+  </div>
+  
+  <button id="refresh-btn">Refresh Tabs</button>
+  
+  <script src="scripts/popup.js"></script>
+</body>
+</html>
