@@ -204,6 +204,8 @@ function detectPlatform(url) {
     return 'grok';
   } else if (url.includes('gemini.google.com')) {
     return 'gemini';
+  } else if (url.includes('chat.deepseek.com')) {
+    return 'deepseek';
   }
 
   return null;

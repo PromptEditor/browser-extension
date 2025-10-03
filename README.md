@@ -12,6 +12,7 @@ The PromptEditor.io Browser Extension acts as a bridge between your prompt edito
 - **Claude** - claude.ai
 - **Grok** - grok.com (X/Twitter's AI)
 - **Gemini** - gemini.google.com
+- **DeepSeek** - chat.deepseek.com
 
 ## 📦 Installation
 
@@ -38,7 +39,7 @@ The PromptEditor.io Browser Extension acts as a bridge between your prompt edito
 ### Basic Workflow
 
 1. **Write your prompt** in the PromptEditor.io editor
-2. **Open AI platforms** in separate browser tabs (ChatGPT, Claude, Grok, Gemini)
+2. **Open AI platforms** in separate browser tabs (ChatGPT, Claude, Grok, Gemini, DeepSeek)
 3. **Open Auto Submit panel** by clicking the ⚡ icon in the editor
 4. **Scan for tabs** - Click "Scan" to detect available AI platform tabs
 5. **Select targets** - Check/uncheck platforms you want to submit to

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "PromptEditor.io Auto-Injector",
+  "name": "PromptEditor.io Auto-Submit",
   "version": "1.0.0",
-  "description": "Automatically inject prompts from PromptEditor.io into various LLM interfaces",
+  "description": "Automatically submit prompts from PromptEditor.io to multiple AI platforms",
   "permissions": [
     "tabs",
     "activeTab",
@@ -16,6 +16,7 @@
     "https://twitter.com/i/grok*",
     "https://grok.com/*",
     "https://gemini.google.com/*",
+    "https://chat.deepseek.com/*",
     "http://localhost:3000/*",
     "http://localhost:3001/*"
   ],
@@ -31,7 +32,8 @@
         "https://x.com/i/grok*",
         "https://twitter.com/i/grok*",
         "https://grok.com/*",
-        "https://gemini.google.com/*"
+        "https://gemini.google.com/*",
+        "https://chat.deepseek.com/*"
       ],
       "js": ["scripts/content.js"],
       "run_at": "document_idle"
